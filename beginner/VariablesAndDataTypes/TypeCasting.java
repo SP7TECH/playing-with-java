@@ -1,4 +1,4 @@
-package beginner.Intro;
+package beginner.VariablesAndDataTypes;
 
 public class TypeCasting {
     public static void main(String args[]) {
