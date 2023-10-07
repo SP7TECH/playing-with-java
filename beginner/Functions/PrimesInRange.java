@@ -1,8 +1,8 @@
 package beginner.Functions;
 import java.util.Scanner;
 
-public class PrimeNumbers {
-    public static boolean checkPrime(int n) {
+public class PrimesInRange {
+    public static boolean isPrime(int n) {
         if(n == 2) return true;
 
         for(int i = 2; i <= Math.sqrt(n); i++) {
@@ -16,16 +16,17 @@ public class PrimeNumbers {
 
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
-            System.out.println("Enter a number to check whether it is prime or not: ");
+            System.out.println("Enter a number to get prime numbers that exist in the range");
 
             int n = sc.nextInt();
-            
-            if(checkPrime(n)) {
-                System.out.println("Prime number");
-            } else {
-                System.out.println(" Not a prime number");
-            }
+            for(int i = 2; i <= n; i++) {
+                isPrime(i);
 
+                if(isPrime(i)) {
+                    System.out.println(i);
+                }
+            }
         }
-    }    
+    }
+
 }
