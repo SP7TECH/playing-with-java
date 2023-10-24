@@ -1,7 +1,7 @@
 package beginner.AdvancedPatterns;
 import java.util.Scanner;
 
-public class SolidRhombus {
+public class HollowRhombus {
     public static void printSolidRhombus(int n) {
         for(int i = 1; i <= n; i++) {
             // spaces
