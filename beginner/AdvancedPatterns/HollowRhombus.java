@@ -2,7 +2,7 @@ package beginner.AdvancedPatterns;
 import java.util.Scanner;
 
 public class HollowRhombus {
-    public static void printSolidRhombus(int n) {
+    public static void printHollowRhombus(int n) {
         for(int i = 1; i <= n; i++) {
             // spaces
             for(int j = 1; j <= n - i; j++) {
@@ -27,7 +27,7 @@ public class HollowRhombus {
             System.out.println("Enter the number of lines to be printed");
 
             int n = sc.nextInt();
-            printSolidRhombus(n);
+            printHollowRhombus(n);
         }   
     }
 }
