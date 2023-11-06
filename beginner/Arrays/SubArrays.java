@@ -2,9 +2,10 @@ package beginner.Arrays;
 
 public class SubArrays {
     public static void printSubArrays(int arr[]) {
-        for(int i = 0; i < arr.length; i++) {
+        int n = arr.length;
+        for(int i = 0; i < n; i++) {
             int start = i;
-            for(int j = i + 1; j < arr.length; j++) {
+            for(int j = i + 1; j < n; j++) {
                 int end = j;
                 for(int k = start; k < end; k++) {
                     System.out.print(arr[k] + " ");
@@ -13,6 +14,8 @@ public class SubArrays {
             }
             System.out.println();
         }
+
+        System.out.println("Total number of sub arrays: " + (n * (n + 1)) / 2);
     }
 
     public static void main(String[] args) {
