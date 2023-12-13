@@ -6,9 +6,9 @@ public class BuyAndSellStocks {
         int buyPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
 
-        if(price.length == 0) return maxProfit;
+        if(n == 0) return maxProfit;
 
-        for(int i = 0; i < price.length; i++) {
+        for(int i = 0; i < n; i++) {
             if(buyPrice < price[i]) {
                 int profit = price[i] - buyPrice;
                 maxProfit = Math.max(maxProfit, profit);
