@@ -3,6 +3,7 @@ package beginner.Sorting;
 public class BubbleSort {
     public static void bubbleSort(int arr[]) {
         int n = arr.length;
+        if(n == 0) return;
 
         for(int turn = 0; turn < n - 1; turn++) {
             int swaps = 0;
@@ -21,6 +22,8 @@ public class BubbleSort {
     }
 
     public static void printArr(int arr[]) {
+        if(arr.length == 0) System.out.println("Empty array");
+
         for(int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
