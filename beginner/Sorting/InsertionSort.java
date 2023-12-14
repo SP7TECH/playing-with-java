@@ -6,15 +6,15 @@ public class InsertionSort {
         if(n == 0) return;
 
         for(int i = 1; i < n; i++) {
-            int currentIndex = i;
-            int prevIndex = i - 1;
+            int curr = arr[i];
+            int prev = i - 1;
 
-            while(prevIndex >= 0 && arr[prevIndex] > arr[currentIndex]) {
-                arr[prevIndex + 1] = arr[prevIndex];
-                prevIndex--;
+            while(prev >= 0 && arr[prev] > curr) {
+                arr[prev + 1] = arr[prev];
+                prev--;
             }
 
-            arr[prevIndex + 1] = arr[currentIndex];
+            arr[prev + 1] = curr;
         }
     }
 
