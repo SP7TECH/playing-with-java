@@ -3,7 +3,6 @@ package beginner.Sorting;
 public class InsertionSort {
     public static void insertionSort(int arr[]) {
         int n = arr.length;
-        if(n == 0) return;
 
         for(int i = 1; i < n; i++) {
             int curr = arr[i];

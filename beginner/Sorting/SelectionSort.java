@@ -4,7 +4,6 @@ public class SelectionSort {
 
     public static void selectionSort(int arr[]) {
         int n = arr.length;
-        if(n == 0) return;
 
         for(int i = 0; i < n - 1; i++) {
             int minPosition = i;

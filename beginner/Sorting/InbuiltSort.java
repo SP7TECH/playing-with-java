@@ -4,6 +4,8 @@ import java.util.Collections;
 
 public class InbuiltSort {
     public static void printArr(Integer arr[]) {
+        if(arr.length == 0) System.out.println("Empty Array");
+        
         for(int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
