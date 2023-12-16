@@ -19,6 +19,20 @@ public class DiagonalSum {
         return sum;
     }
 
+    public static int optimizedDiagonalSum(int arr[][]) {
+        int sum = 0;
+        
+        for(int i = 0; i < arr.length; i++) {
+            sum += arr[i][i];
+            
+            // i+j = n - 1 => j = n - 1 - i
+            int j = arr.length - 1 - i;
+            if((i + j) == arr.length - 1 && i != j) sum += arr[i][j];
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args) {
         int evenMatrix[][] = {
             {1, 2, 3, 4}, 
@@ -33,5 +47,8 @@ public class DiagonalSum {
 
         System.out.println(diagonalSum(evenMatrix));
         System.out.println(diagonalSum(oddMatrix));
+
+        System.out.println(optimizedDiagonalSum(evenMatrix));
+        System.out.println(optimizedDiagonalSum(oddMatrix));
     }
 }
