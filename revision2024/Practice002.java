@@ -17,8 +17,7 @@ public class Practice002 {
             System.out.println("Enter the number");
 
             int num = sc.nextInt();
-            checkPrime(num);
-            if(isPrime) 
+            if(checkPrime(num)) 
                 System.out.println("Prime Number");
             else
                 System.out.println("Not a prime number"); 
