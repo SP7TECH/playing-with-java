@@ -64,6 +64,22 @@ public class Practice009 {
 
         return maxSum;
     }
+
+    public static int maxSubArraySumKadaneAlgorithm(int arr[]) {
+        int maxSum = Integer.MIN_VALUE;
+        int currentSum = 0;
+        
+        for(int i = 0; i < arr.length; i++) {
+            currentSum += arr[i];
+            if(currentSum < 0) currentSum = 0;
+
+            if(currentSum > maxSum) {
+                maxSum = currentSum;
+            }
+        }
+
+        return maxSum;
+    }
     
     public static void main(String[] args) {
         int arr[] = {12, 13, 14, 15, 18};
@@ -71,5 +87,6 @@ public class Practice009 {
 
         System.out.println("Max sub array sum (Brute Force): " + maxSubArraySumBruteForce(arr));
         System.out.println("Max sub array sum (Prefix Array): " + maxSubArraySumPrefixArray(arr));
+        System.out.println("Max sub array sum (Kadane's Algorithm): " + maxSubArraySumKadaneAlgorithm(arr));
     }
 }
