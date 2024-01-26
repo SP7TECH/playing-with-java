@@ -2,13 +2,28 @@ package revision2024;
 import java.util.Scanner;
 
 public class Practice012 {
-    public static void printArr(int arr[][], int rows, int cols) {
+    public static void printArr(int arr[][]) {
+        int rows = arr.length;
+        int cols = arr[0].length;
         System.out.println("Your 2D Array: ");
         for(int i = 0; i < rows; i++) {
             for(int j = 0; j < cols; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
+        }
+    }
+
+    public static void searchInArray(int arr[][], int toSearch) {
+        int rows = arr.length;
+        int cols = arr[0].length;
+
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                if(arr[i][j] == toSearch) {
+                    System.out.println("Element found at index (" + i + "," + j + ")");
+                }
+            }
         }
     }
 
@@ -29,7 +44,11 @@ public class Practice012 {
                 }
             }
 
-            printArr(arr, rows, cols);
+            printArr(arr);
+
+            System.out.println("Enter an element to search in the array");
+            int toSearch = sc.nextInt();
+            searchInArray(arr, toSearch);
         }
     }
 }
