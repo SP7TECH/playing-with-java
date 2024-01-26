@@ -74,10 +74,39 @@ public class Practice011 {
         printArr(arr);
     }
 
+    public static void countSort(int arr[]) {
+        int n = arr.length;
+        if(n == 0) return;
+
+        int largest = Integer.MIN_VALUE;
+        for(int i = 0; i < n; i++) {
+            largest = Math.max(arr[i], largest);
+        }
+
+        int count[] = new int[largest + 1];
+        for(int i = 0; i < n; i++) {
+            count[arr[i]]++;
+        }
+        printArr(count);
+
+        int j = 0;
+        for(int i = 0; i < count.length; i++) {
+            while(count[i] > 0) {
+                arr[j] = i;
+                j++;
+                count[i]--;
+            }
+        }
+        printArr(arr);
+    }
+
     public static void main(String[] args) {
         int arr[] = {5, 4, 1, 3, 2};
         bubbleSort(arr);
         selectionSort(arr);
         insertionSort(arr);
+
+        int arr2[] = {5, 4, 1, 3, 2, 5};
+        countSort(arr2);
     }
 }
