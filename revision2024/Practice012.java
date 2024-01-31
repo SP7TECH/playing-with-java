@@ -27,6 +27,13 @@ public class Practice012 {
         }
     }
 
+    public static void printSpiral(int arr[][]) {
+        int rows = arr.length;
+        int cols = arr[0].length;
+        // code goes here
+        System.out.println("Spiral");
+    }
+
     public static void diagonalSum(int arr[][]) {
         int sum = 0;
         int rows = arr.length;
