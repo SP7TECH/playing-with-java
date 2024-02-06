@@ -31,6 +31,13 @@ public class Practice012 {
         int rows = arr.length;
         int cols = arr[0].length;
         // code goes here
+
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                
+            }
+        }
+
         System.out.println("Spiral");
     }
 
