@@ -141,6 +141,32 @@ public class Practice013 {
         
         return arr;
     }
+
+    public static int maxSubArraySumBruteForce(int arr[]) {
+        int n = arr.length;
+        int maxSum = Integer.MIN_VALUE;
+        int currentSum = 0;
+
+        if(n == 0) maxSum = -1;
+        if(n == 1) maxSum = arr[0];
+
+        for(int i = 0; i < n - 1; i++) {
+            int start = i;
+            for(int j = i + 1; j < n - 1; j++) {
+                int end = j;
+
+                for(int k = start; k <= end; k++) {
+                    currentSum += arr[k];
+                }
+
+                if (currentSum > maxSum) {
+                    maxSum = currentSum;
+                }
+            }
+        }
+
+        return maxSum;
+    }
     
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
@@ -166,6 +192,8 @@ public class Practice013 {
 
             System.out.print("Insertion Sort ------> ");
             printArray(insertionSort(arr2));
+
+            System.out.print("Max SubArray Sum (Brute Force) ---> " + maxSubArraySumBruteForce(arr2));
         }
     }
 }
