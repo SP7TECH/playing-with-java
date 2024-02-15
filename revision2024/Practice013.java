@@ -143,17 +143,14 @@ public class Practice013 {
     }
 
     public static int maxSubArraySumBruteForce(int arr[]) {
-        int n = arr.length;
         int maxSum = Integer.MIN_VALUE;
         int currentSum = 0;
 
-        if(n == 0) maxSum = -1;
-        if(n == 1) maxSum = arr[0];
-
-        for(int i = 0; i < n - 1; i++) {
+        for(int i = 0; i < arr.length; i++) {
             int start = i;
-            for(int j = i + 1; j < n - 1; j++) {
+            for(int j = i; j < arr.length; j++) {
                 int end = j;
+                currentSum = 0;
 
                 for(int k = start; k <= end; k++) {
                     currentSum += arr[k];
@@ -162,6 +159,24 @@ public class Practice013 {
                 if (currentSum > maxSum) {
                     maxSum = currentSum;
                 }
+            }
+        }
+
+        return maxSum;
+    }
+
+    public static int kadanesAlgo(int arr[]) {
+        int maxSum = Integer.MIN_VALUE;
+        int currentSum = 0;
+
+        for(int i = 0; i < arr.length; i++) {
+            currentSum += arr[i];
+            if(currentSum < 0) {
+                currentSum = 0;
+            }
+
+            if(currentSum > maxSum) {
+                maxSum = currentSum;
             }
         }
 
@@ -193,7 +208,10 @@ public class Practice013 {
             System.out.print("Insertion Sort ------> ");
             printArray(insertionSort(arr2));
 
-            System.out.print("Max SubArray Sum (Brute Force) ---> " + maxSubArraySumBruteForce(arr2));
+            int arr3[] = {2, 4, 6, 8, 10};
+            System.out.print("Max SubArray Sum (Brute Force) ---> " + maxSubArraySumBruteForce(arr3));
+            System.out.println();
+            System.out.print("Max SubArray Sum (Kadane's Algo) ---> " + kadanesAlgo(arr3));
         }
     }
 }
