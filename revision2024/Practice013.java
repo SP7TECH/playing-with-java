@@ -182,6 +182,29 @@ public class Practice013 {
 
         return maxSum;
     }
+
+    public static int trappedRainWater(int arr[]) {
+        int n = arr.length;
+        
+        int trappedWater = 0;
+        int leftMax[] = new int[n];
+        int rightMax[] = new int[n];
+
+        // calculate left max
+        leftMax[0] = arr[0];
+        for(int i = 0; i < n; i++) {
+            
+        }
+
+        // calculate right max
+        rightMax[n - 1] = arr[n - 1];
+        for(int i = n; i > 0; i--) {
+            
+
+        }
+
+        return trappedWater;
+    }
     
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
