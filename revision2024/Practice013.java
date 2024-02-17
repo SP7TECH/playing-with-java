@@ -183,24 +183,31 @@ public class Practice013 {
         return maxSum;
     }
 
-    public static int trappedRainWater(int arr[]) {
-        int n = arr.length;
+    public static int trappedRainWater(int barHeights[], int width) {
+        int n = barHeights.length;
         
-        int trappedWater = 0;
+        // calculating left max
         int leftMax[] = new int[n];
-        int rightMax[] = new int[n];
-
-        // calculate left max
-        leftMax[0] = arr[0];
-        for(int i = 0; i < n; i++) {
-            
+        leftMax[0] = barHeights[0];
+        for(int i = 1; i < n; i++) {
+            leftMax[i] = Math.max(barHeights[i], leftMax[i - 1]);
         }
 
-        // calculate right max
-        rightMax[n - 1] = arr[n - 1];
-        for(int i = n; i > 0; i--) {
-            
+        // calculating right max
+        int rightMax[] = new int[n];
+        rightMax[n - 1] = barHeights[n - 1];
+        for(int i = n - 2; i >= 0; i--) {
+            rightMax[i] = Math.max(barHeights[i], rightMax[i + 1]);
+        }
 
+        printArray(leftMax);
+        printArray(rightMax);
+
+        // trapped water = (min(left and right max) - barHeight) * width
+        int trappedWater = 0;
+        for(int i = 0; i < n; i++) {
+            int waterLevel = (Math.min(leftMax[i], rightMax[i])) - barHeights[i];
+            trappedWater += waterLevel;
         }
 
         return trappedWater;
@@ -234,7 +241,10 @@ public class Practice013 {
             int arr3[] = {2, 4, 6, 8, 10};
             System.out.print("Max SubArray Sum (Brute Force) ---> " + maxSubArraySumBruteForce(arr3));
             System.out.println();
-            System.out.print("Max SubArray Sum (Kadane's Algo) ---> " + kadanesAlgo(arr3));
+            System.out.println("Max SubArray Sum (Kadane's Algo) ---> " + kadanesAlgo(arr3));
+
+            int barHeight[] = {4, 2, 0, 6, 3, 2, 5};
+            System.out.println("Trapped rainwater = " + trappedRainWater(barHeight, 1));
         }
     }
 }
