@@ -1,0 +1,27 @@
+package basics.Arrays;
+
+public class BuyAndSellStocks {
+    public static int buySellStocks(int price[]) {
+        int n = price.length;
+        int buyPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        if(n == 0) return maxProfit;
+
+        for(int i = 0; i < n; i++) {
+            if(buyPrice < price[i]) {
+                int profit = price[i] - buyPrice;
+                maxProfit = Math.max(maxProfit, profit);
+            } else {
+                buyPrice = price[i];
+            }
+        }
+
+        return maxProfit;
+    }
+    
+    public static void main(String[] args) {
+        int stockPrice[] = {7, 1, 5, 3, 6, 4};
+        System.out.println("Max profit — " + buySellStocks(stockPrice));
+    }    
+}
