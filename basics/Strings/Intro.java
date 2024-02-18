@@ -20,6 +20,12 @@ public class Intro {
             System.out.println(lastName);
 
             // Input for Strings
+
+            String word = sc.next();
+            System.out.println(word);
+
+            String sentence = sc.nextLine();
+            System.out.println(sentence);
         }
     }
 }
