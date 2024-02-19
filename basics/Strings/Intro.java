@@ -29,7 +29,12 @@ public class Intro {
             System.out.println("Enter a sentence: ");
             String sentence = sc.nextLine();
             System.out.println(sentence);
+
+            // Length of the string
             System.out.println(sentence.length());
+
+            // Concatenation
+            System.out.println("Word: " + word + ". Sentence: " + sentence);
         }
     }
 }
