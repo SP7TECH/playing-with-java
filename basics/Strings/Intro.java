@@ -21,11 +21,15 @@ public class Intro {
 
             // Input for Strings
 
+            System.out.println("Enter a word: ");
             String word = sc.next();
             System.out.println(word);
 
+            sc.nextLine();
+            System.out.println("Enter a sentence: ");
             String sentence = sc.nextLine();
             System.out.println(sentence);
+            System.out.println(sentence.length());
         }
     }
 }
