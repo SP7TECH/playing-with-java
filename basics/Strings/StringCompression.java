@@ -13,12 +13,14 @@ public class StringCompression {
             if(str.charAt(i - 1) == str.charAt(i)) {
                 count++;
             } else {
-                compressedStr.append(count);
+                if(count > 1) {
+                    compressedStr.append(count);
+                }
                 count = 1;
                 compressedStr.append(str.charAt(i));
             }
 
-            if (i == str.length() - 1) {
+            if (i == str.length() - 1 && count > 1) {
                 compressedStr.append(count);
             }
         }
