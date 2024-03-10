@@ -13,6 +13,9 @@ public class Intro {
             System.out.println("Bit-wise OR: " + (a | b));
 
             System.out.println("Bit-wise XOR: " + (a ^ b));
+
+            // One's complement
+            System.out.println("One's Complement -> " + a + ": " + ~a + ", " + b + ": " + ~b);
         }
     }
 }
