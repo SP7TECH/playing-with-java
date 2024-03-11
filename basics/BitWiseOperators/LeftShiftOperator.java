@@ -1,7 +1,7 @@
 package basics.BitWiseOperators;
 import java.util.Scanner;
 
-public class ShiftOperators {
+public class LeftShiftOperator {
     public static int leftShift(int a, int b) {
         return (int)(a * Math.pow(2, b));
     }
