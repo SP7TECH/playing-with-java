@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ShiftOperators {
     public static int leftShift(int a, int b) {
-        return (int)(a * Math.pow(b, 2));
+        return (int)(a * Math.pow(2, b));
     }
 
     public static void main(String[] args) {
