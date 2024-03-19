@@ -10,6 +10,11 @@ public class IthBitOperations {
 
         return 1;
     }
+
+    public static int setIthBit(int n, int i) {
+        int bitMask = 1 << i;
+        return n | bitMask;
+    }
     
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
@@ -20,6 +25,10 @@ public class IthBitOperations {
             int i = sc.nextInt();
 
             System.out.println(getIthBit(n, i));
+
+            System.out.println("Enter the position to set the bit as 1: ");
+            int position = sc.nextInt();
+            System.out.println(setIthBit(n, position));
         }
     }
 }
