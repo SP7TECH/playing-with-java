@@ -15,6 +15,11 @@ public class IthBitOperations {
         int bitMask = 1 << i;
         return n | bitMask;
     }
+
+    public static int clearIthBit(int n, int i) {
+        int bitMask = ~(1 << i);
+        return n & bitMask;
+    }
     
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
@@ -29,6 +34,10 @@ public class IthBitOperations {
             System.out.println("Enter the position to set the bit as 1: ");
             int position = sc.nextInt();
             System.out.println(setIthBit(n, position));
+
+            System.out.println("Enter the position to clear the bit i.e. make it 0: ");
+            int pos = sc.nextInt();
+            System.out.println(clearIthBit(n, pos));
         }
     }
 }
