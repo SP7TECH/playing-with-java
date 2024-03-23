@@ -20,6 +20,10 @@ public class IthBitOperations {
         int bitMask = ~(1 << i);
         return n & bitMask;
     }
+
+    public static int updateBit(int n, int i) {
+        return n;
+    }
     
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
