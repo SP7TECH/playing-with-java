@@ -28,6 +28,10 @@ public class IthBitOperations {
             return setIthBit(n, i);
         }
     }
+
+    public static int clearLastIBits(int n, int i) {
+        return n;
+    }
     
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
