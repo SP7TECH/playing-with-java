@@ -13,6 +13,10 @@ public class Search2DMatrixOne {
         return false;
     }
 
+    public static boolean searchMatrix2(int[][] matrix, int target) {
+        return false;
+    }
+
     public static void main(String[] args) {
         int arr[][] = {{1, 3, 5, 7}, 
                 {10, 11, 16, 20}, 
