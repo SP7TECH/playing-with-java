@@ -29,6 +29,12 @@ public class IthBitOperations {
         }
     }
 
+    public static int updateBit2(int n, int i, int newBit) {
+        n = clearIthBit(n, i);
+        int bitMask = newBit << i;
+        return n | bitMask;
+    }
+
     public static int clearLastIBits(int n, int i) {
         int bitMask = (-1) << i;
         return n & bitMask;
@@ -60,6 +66,7 @@ public class IthBitOperations {
             int newPos = sc.nextInt();
             int newBit = sc.nextInt();
             System.out.println(updateBit(n, newPos, newBit));
+            System.out.println(updateBit2(n, newPos, newBit));
 
             System.out.println("Enter the number of bits to clear: ");
             int bitsToClear = sc.nextInt();
