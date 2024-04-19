@@ -39,10 +39,6 @@ public class IthBitOperations {
         int bitMask = (-1) << i;
         return n & bitMask;
     }
-
-    public static int clearRangeOfBits(int n, int start, int end) {
-        return n;
-    }
     
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
