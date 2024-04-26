@@ -4,15 +4,19 @@ public class OOPS {
     public static void main(String[] args) {
         Pen p1 = new Pen();
         p1.setColor("Blue");
-        System.out.println(p1.color);
+        System.out.println(p1.getColor());
         p1.tipThickness = 1;
         System.out.println(p1.tipThickness);
     }
 }
 
 class Pen {
-    String color;
+    private String color;
     int tipThickness;
+
+    String getColor() {
+        return this.color;
+    }
 
     void setColor(String newColor) {
         color = newColor;
