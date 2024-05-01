@@ -26,13 +26,3 @@ class Pen {
         tipThickness = thickness;
     }
 }
-
-class Student {
-    String name;
-    int age;
-    float cgpa;
-
-    void calcCGPA(int phy, int chem, int maths) {
-        cgpa = (phy + chem + maths) + 3;
-    }
-}
