@@ -14,6 +14,19 @@ public class Inheritance {
 
         Gigi.legs = 4;
         System.err.println(Gigi.legs);
+
+        // Hierarchial
+        Fish shark = new Fish();
+        shark.eats();
+        shark.swims();
+
+        Mammals monkey = new Mammals();
+        monkey.eats();
+        monkey.walks();
+
+        Bird pigeon = new Bird();
+        pigeon.eats();
+        pigeon.fly();
     }
 }
 
@@ -32,13 +45,23 @@ class Animal {
 class Fish extends Animal {
     int fins;
 
-    void swim() {
+    void swims() {
         System.out.println("swims in water");
     }
 }
 
 class Mammals extends Animal {
     int legs;
+
+    void walks() {
+        System.out.println("walks");
+    }
+}
+
+class Bird extends Animal {
+    void fly() {
+        System.out.println("flies");
+    }
 }
 
 class Dog extends Mammals {
