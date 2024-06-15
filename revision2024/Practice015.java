@@ -14,6 +14,10 @@ public class Practice015 {
             System.out.println("Subtraction: " + c1.subtract());
             System.out.println("Multiplication: " + c1.multiply());
             System.out.println("Division: " + c1.divide());
+
+            int c = sc.nextInt();
+            LargestNumber l1 = new LargestNumber(a, b, c);
+            l1.getLargestNumber();
         }
     }
 }
@@ -41,5 +45,25 @@ class Calculator {
 
     int divide() {
         return this.a / this.b;
+    }
+}
+
+class LargestNumber {
+    int a, b, c;
+
+    LargestNumber(int a, int b, int c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    void getLargestNumber() {
+        if(a > b && a > c) {
+            System.out.println(a);
+        } else if(b > a && b > c) {
+            System.out.println(b);
+        } else {
+            System.out.println(c);
+        }
     }
 }
