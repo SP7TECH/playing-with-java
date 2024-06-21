@@ -15,9 +15,13 @@ public class Practice015 {
             System.out.println("Multiplication: " + c1.multiply());
             System.out.println("Division: " + c1.divide());
 
+            System.out.println("Enter a third number apart from " + a + " " + b);
             int c = sc.nextInt();
             LargestNumber l1 = new LargestNumber(a, b, c);
             l1.getLargestNumber();
+
+            int n = s
+            Patterns p1 = new Patterns(c)
         }
     }
 }
@@ -64,6 +68,23 @@ class LargestNumber {
             System.out.println(b);
         } else {
             System.out.println(c);
+        }
+    }
+}
+
+class Patterns {
+    int n;
+
+    Patterns(int n) {
+        this.n = n;
+    }
+
+    void squarePattern() {
+        for(int i = 0; i < this.n; this.n++) {
+            for(int j = 0; j < this.n; this.n++) {
+                System.out.print("* ");
+            }
+            System.out.println();    
         }
     }
 }
